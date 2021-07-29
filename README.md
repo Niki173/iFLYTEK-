@@ -1,9 +1,3 @@
-# Python代码仓库模板
-
-![GitHub forks](https://img.shields.io/github/forks/GT-ZhangAcer/PythonRepository-Template?style=for-the-badge) ![GitHub Repo stars](https://img.shields.io/github/stars/GT-ZhangAcer/PythonRepository-Template?style=for-the-badge) 
-
-这是一个简单的迁移模板，使用者只需在[模板仓库](https://github.com/GT-ZhangAcer/PythonRepository-Template)中点击[use this template](https://github.com/GT-ZhangAcer/PythonRepository-Template/generate)即可创建属于自己的具备前端页面空白Paddle项目。
-
 
 ## 项目结构
 
@@ -15,18 +9,48 @@
 --README.md 项目说明文件，可使用Markdowm编辑器进行编辑。
 --requirements.txt Python项目依赖列表
 ```  
-### gh-pages分支
-该分支下默认会给出静态页面文件，在使用该模板后将自动生成一个项目介绍网页`https://GitHub昵称.github.io/项目名`，我们只需对该分支下的`index.md`文件进行修改即可操控这个页面。
+## **一、赛事背景**
+农作物病虫害严重制约着农业生产，因为农作物病虫害种类多、密度大，极易造成农作物大量减产。同时由于传统人眼识别病虫害的方法速度较慢、准确度较低，会导致农药的滥用，破坏自然环境。如今随着精准农业和智慧农业概念的兴起和发展，利用信息技术辅助农业生产，实现对农作物病虫害的智能识别和检测，以减少不必要的农药喷施，对保护生态系统均衡，保障农作物安全生产，提高农作物的质量方面，有着十分重要的促进作用。
 
-## 使用方法
+## **二、赛事任务**
+最为有效的病虫害识别方法是图片识别，本次大赛提供了大量农民在田间地头拍摄的叶菜的病虫害图片，参赛选手需基于提供的样本构建模型，实现叶菜的病虫害图像识别，即为图片分类。
 
-### Step1 使用模板仓库创建一个新的个人仓库
-进入[模板仓库]()主页，获取最新模板或点击[此处](https://github.com/GT-ZhangAcer/PythonRepository-Template/generate)立即创建一个这样的特殊仓库。
-<img src="https://ai-studio-static-online.cdn.bcebos.com/77a8ffd9cd9b4953a39f609bb2b0a4903bc046f354944d5d9ee776676f580095" width="800px">  
-简单填写仓库信息  
-<img src="https://ai-studio-static-online.cdn.bcebos.com/e42d4a7b3a064e788b0761570b19b27e18f19a9eeba44c21abf22d7270e38fda" width="800px">
+## **三、评审规则**
 
-### Step2 上传项目文件至个人仓库
-<img src="https://ai-studio-static-online.cdn.bcebos.com/81ed71bc5ab74d01ab3ed244b987a08b7f3664baecf4475f8c337a2cbfcb04e5" width="800px">  
-<img src="https://ai-studio-static-online.cdn.bcebos.com/069da53af0ca4cbe8f2de962d2cd3e2d6dbbba9e44d9411bb0bd8dda8a7c1b52" width="800px"> 
+评估指标
+本模型依据提交的结果文件，采用准确率进行评价。
+
+![](https://ai-studio-static-online.cdn.bcebos.com/7d526a6198d94a6181501eb0651292480854c35fbbe64c5e95cbb5a1185b32a1)
+
+## **四、数据说明**
+
+1.数据说明
+
+
+本次比赛为参赛选手提供了叶菜的病虫害图像数据：包括图像及其所属病虫害标签。数据主体为农民在不同环境条件下拍摄的叶菜农作物图像，每张图像的主体突出度，背景复杂程度、光照条件，图像清晰度均存在一定差别。图片已按类别放在不同文件夹内，文件夹名称即为图片的category_id。
+
+1：用药不当
+
+![](https://ai-studio-static-online.cdn.bcebos.com/9a2373152d3345748cbcdc99ea2b4f7e6dd03debf8f040a8a26008773dbdc557)
+
+
+2：疫病
+
+![](https://ai-studio-static-online.cdn.bcebos.com/d6378a23e4714a1aa93b84a8b030845e20c3350a7f714e7d90983a8b5321092b)
+
+
+3：炭疽病
+
+![](https://ai-studio-static-online.cdn.bcebos.com/a2b0bedd36154d76a84e3692d2a80b76787f92383e494c5baf3ec0992e562e87)
+
+
+
+本次比赛为参赛选手提供的数据分为训练集、测试集、提交样例三类文件：
+
+训练集：包含1000多张。
+
+测试集：包含300张，图片文件的名称即为image_id。
+
+提交样例：表头为image_id和category_id的CSV文件，选手提交数据时需要将测试集的图片id与模型预测的类别id按样例格式填入CSV中，进行提交。
+
 
